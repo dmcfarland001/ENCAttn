@@ -121,68 +121,40 @@
                         </div>
 
 
-                        <div id="inner_content1">
+                        <script type="text/javascript">
+                            window.onload = function () {
+                                var chart = new CanvasJS.Chart("chartContainer",
+                                        {
+                                            theme: "theme2",
+                                            title: {
+                                                text: "Gaming Consoles Sold in 2012"
+                                            },
+                                            data: [
+                                                {
+                                                    type: "pie",
+                                                    showInLegend: true,
+                                                    toolTipContent: "{y} - #percent %",
+                                                    yValueFormatString: "#0.#,,. Million",
+                                                    legendText: "{indexLabel}",
+                                                    dataPoints: [
+                                                        {y: 4181563, indexLabel: "PlayStation 3"},
+                                                        {y: 2175498, indexLabel: "Wii"},
+                                                        {y: 3125844, indexLabel: "Xbox 360"},
+                                                        {y: 1176121, indexLabel: "Nintendo DS"},
+                                                        {y: 1727161, indexLabel: "PSP"},
+                                                        {y: 4303364, indexLabel: "Nintendo 3DS"},
+                                                        {y: 1717786, indexLabel: "PS Vita"}
+                                                    ]
+                                                }
+                                            ]
+                                        });
+                                chart.render();
+                            }
+                        </script>
+                        <script type="text/javascript" src="UCF%20%20CAH%20%20Writing%20and%20Rhetoric_files/canvasjs.min.js"></script>
 
-                            <p>
-                                Have you ever thought, and we mean really thought about your use of attention? How about
-                                the
-                                lack of control you have over it? Scary stuff, we know. This web page is dedicated to
-                                bringing
-                                awareness on how our attention has been affected by the advent of new technologies. The
-                                smart
-                                phone, laptop, applications and notifications have all provided us with a slew of
-                                distractions
-                                from our day-to-day lives.
-                            </p>
-                        </div>
-                        <div id="inner_content2">
-                            <p>
-                                According to scholar Howard Rheingold, "you don't have to work to make your mind wander"
-                                (PAGE).
-                                This fact is present through the constant use of our devices. We tend to reach for our
-                                technologies at the sight of any potential engagement. A ring, buzz, blink and vibration
-                                all
-                                set
-                                us off course and into the realm of being digitally distracted. Though this isn't always
-                                entirely bad, consider this: according to an article in the Harvard Business Review
-                                entitled
-                                Conquering Digital Distraction, a recent study found that distracted workers cost the
-                                economy an
-                                average of $995 billion a year (Conquering Digital Distraction 111). This high rate of
-                                distraction can be attributed to what Rheingold calls "attentional blink". That is, the
-                                temporary disruption caused when attention shifts from one thing to another. With 11
-                                million
-                                bits of information interacting with us every second and only 40 of those being
-                                processed
-                                consciously, it can get hard to prioritize focus over distraction (PAGE RHEINGOLD).
-                                Research
-                                suggests that this information overload is the cause for much of our what leads us to be
-                                distracted.
-                            </p>
-                        </div>
-                        <div id="inner_content3">
-                            <p>
-                                In another study, German researchers who studied device-using students, found that
-                                device-using
-                                students researchers found that "attention is a mental mechanism that can be focused on
-                                stimuli
-                                in order to process them, but only a limited quantity of stimuli can be processed at any
-                                given
-                                time. If demands exceed available attentional capacity, the cognitive system overloads
-                                and
-                                performance suffers" (Aagaard PAGE). In other words, we can be overwhelmed and
-                                compromised
-                                by
-                                the amount of stimuli we encounter.
-                            </p>
-                        </div>
-
-                        <div id="inner_content4">
-                            <p4 class="par4">
-                                What then is the root of our distraction, how is it affecting us and what do we do about
-                                it?
-                                Well, this page aims to find out just that.
-                            </p4>
+                        <div>
+                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
                         </div>
 
 
