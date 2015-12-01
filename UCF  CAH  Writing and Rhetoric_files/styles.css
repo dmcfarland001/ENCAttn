@@ -76,7 +76,7 @@ p {
     padding-bottom: 20px;
 }
 
-#root_title {
+#root_title, #main_title {
     padding-top: 20px;
     font-weight: bold;
 }
