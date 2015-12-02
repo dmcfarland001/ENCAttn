@@ -124,28 +124,26 @@
                         <script type="text/javascript">
 
                             window.onload = function () {
+
                                 // Pie chart 1
                                 var chart = new CanvasJS.Chart("chartContainer1",
                                         {
                                             theme: "theme2",
                                             title: {
-                                                text: "Gaming Consoles Sold in 2012"
+                                                text: "What's the most distracting thing for you while on a device?"
                                             },
                                             data: [
                                                 {
                                                     type: "pie",
                                                     showInLegend: true,
-                                                    toolTipContent: "{y} - #percent %",
+                                                    toolTipContent: "#percent %",
                                                     yValueFormatString: "#0.#,,. Million",
                                                     legendText: "{indexLabel}",
                                                     dataPoints: [
-                                                        {y: 4181563, indexLabel: "PlayStation 3"},
-                                                        {y: 2175498, indexLabel: "Wii"},
-                                                        {y: 3125844, indexLabel: "Xbox 360"},
-                                                        {y: 1176121, indexLabel: "Nintendo DS"},
-                                                        {y: 1727161, indexLabel: "PSP"},
-                                                        {y: 4303364, indexLabel: "Nintendo 3DS"},
-                                                        {y: 1717786, indexLabel: "PS Vita"}
+                                                        {y: 64, indexLabel: "Social Media Engagement"},
+                                                        {y: 31, indexLabel: "Notifications"},
+                                                        {y: 4, indexLabel: "Other"},
+                                                        {y: 1, indexLabel: "Games"}
                                                     ]
                                                 }
                                             ]
@@ -157,23 +155,139 @@
                                         {
                                             theme: "theme2",
                                             title: {
-                                                text: "Gaming Consoles Sold in 2012"
+                                                text: "How much time daily are you distracted by your device?"
                                             },
                                             data: [
                                                 {
                                                     type: "pie",
                                                     showInLegend: true,
-                                                    toolTipContent: "{y} - #percent %",
+                                                    toolTipContent: "#percent %",
                                                     yValueFormatString: "#0.#,,. Million",
                                                     legendText: "{indexLabel}",
                                                     dataPoints: [
-                                                        {y: 4181563, indexLabel: "PlayStation 3"},
-                                                        {y: 2175498, indexLabel: "Wii"},
-                                                        {y: 3125844, indexLabel: "Xbox 360"},
-                                                        {y: 1176121, indexLabel: "Nintendo DS"},
-                                                        {y: 1727161, indexLabel: "PSP"},
-                                                        {y: 4303364, indexLabel: "Nintendo 3DS"},
-                                                        {y: 1717786, indexLabel: "PS Vita"}
+                                                        {y: 3, indexLabel: " Less than 1 hour"},
+                                                        {y: 37, indexLabel: " 1+ hours"},
+                                                        {y: 60, indexLabel: " 3+ hours"},
+                                                        {y: 0, indexLabel: " More"}
+                                                    ]
+                                                }
+                                            ]
+                                        });
+                                chart.render();
+
+                                chart = new CanvasJS.Chart("chartContainer3",
+                                        {
+                                            theme: "theme2",
+                                            title: {
+                                                text: "How many social and gaming apps do you have on your mobile device?"
+                                            },
+                                            data: [
+                                                {
+                                                    type: "pie",
+                                                    showInLegend: true,
+                                                    toolTipContent: "#percent %",
+                                                    yValueFormatString: "#0.#,,. Million",
+                                                    legendText: "{indexLabel}",
+                                                    dataPoints: [
+                                                        {y: 46, indexLabel: " 1-4"},
+                                                        {y: 37, indexLabel: " 5-9"},
+                                                        {y: 17, indexLabel: " 10+"}
+                                                    ]
+                                                }
+                                            ]
+                                        });
+                                chart.render();
+
+                                chart = new CanvasJS.Chart("chartContainer4",
+                                        {
+                                            theme: "theme2",
+                                            title: {
+                                                text: "What purpose do your most frequent distractions serve?"
+                                            },
+                                            data: [
+                                                {
+                                                    type: "pie",
+                                                    showInLegend: true,
+                                                    toolTipContent: "#percent %",
+                                                    yValueFormatString: "#0.#,,. Million",
+                                                    legendText: "{indexLabel}",
+                                                    dataPoints: [
+                                                        {y: 41, indexLabel: " Entertainment"},
+                                                        {y: 56, indexLabel: " Socialization"},
+                                                        {y: 2, indexLabel: " Work"},
+                                                        {y: 1, indexLabel: " Other"}
+                                                    ]
+                                                }
+                                            ]
+                                        });
+                                chart.render();
+
+                                chart = new CanvasJS.Chart("chartContainer5",
+                                        {
+                                            theme: "theme2",
+                                            title: {
+                                                text: "How long could you go without being distracted by your device?"
+                                            },
+                                            data: [
+                                                {
+                                                    type: "pie",
+                                                    showInLegend: true,
+                                                    toolTipContent: "#percent %",
+                                                    yValueFormatString: "#0.#,,. Million",
+                                                    legendText: "{indexLabel}",
+                                                    dataPoints: [
+                                                        {y: 0, indexLabel: " No time"},
+                                                        {y: 22, indexLabel: " 10-20 Minutes"},
+                                                        {y: 67, indexLabel: " 30+ Minutes"},
+                                                        {y: 11, indexLabel: " More"}
+                                                    ]
+                                                }
+                                            ]
+                                        });
+                                chart.render();
+
+                                chart = new CanvasJS.Chart("chartContainer6",
+                                        {
+                                            theme: "theme2",
+                                            title: {
+                                                text: "How many things do you multitask at once?"
+                                            },
+                                            data: [
+                                                {
+                                                    type: "pie",
+                                                    showInLegend: true,
+                                                    toolTipContent: "#percent %",
+                                                    yValueFormatString: "#0.#,,. Million",
+                                                    legendText: "{indexLabel}",
+                                                    dataPoints: [
+                                                        {y: 78, indexLabel: " 2-3"},
+                                                        {y: 17, indexLabel: " 4-5"},
+                                                        {y: 5, indexLabel: " 5+"}
+                                                    ]
+                                                }
+                                            ]
+                                        });
+                                chart.render();
+
+                                chart = new CanvasJS.Chart("chartContainer7",
+                                        {
+                                            theme: "theme2",
+                                            title: {
+                                                text: "To what degree do you agree with: My multitasked goals would be accomplished better if I focused on one at a time?"
+                                            },
+                                            data: [
+                                                {
+                                                    type: "pie",
+                                                    showInLegend: true,
+                                                    toolTipContent: "#percent %",
+                                                    yValueFormatString: "#0.#,,. Million",
+                                                    legendText: "{indexLabel}",
+                                                    dataPoints: [
+                                                        {y: 4, indexLabel: " Strongly Disagree"},
+                                                        {y: 11, indexLabel: " Disagree"},
+                                                        {y: 23, indexLabel: " Neutral"},
+                                                        {y: 39, indexLabel: " Agree"},
+                                                        {y: 23, indexLabel: " Strongly Agree"}
                                                     ]
                                                 }
                                             ]
@@ -182,18 +296,36 @@
 
                             }
                         </script>
+
                         <script type="text/javascript"
                                 src="UCF%20%20CAH%20%20Writing%20and%20Rhetoric_files/canvasjs.min.js"></script>
 
                         <div id="main_chart_container">
-                            <!-- Fix this -->
-                            <ol type="1">
-                                <li id="c-hart1">
+
+                            <ol type="1" id="chart_main">
+
+                                <li id="chart1">
                                     <div id="chartContainer1" style="height: 300px; width: 100%;"></div>
                                 </li>
                                 <li id="chart2">
                                     <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
                                 </li>
+                                <li id="chart3">
+                                    <div id="chartContainer3" style="height: 300px; width: 100%;"></div>
+                                </li>
+                                <li id="chart4">
+                                    <div id="chartContainer4" style="height: 300px; width: 100%;"></div>
+                                </li>
+                                <li id="chart5">
+                                    <div id="chartContainer5" style="height: 300px; width: 100%;"></div>
+                                </li>
+                                <li id="chart6">
+                                    <div id="chartContainer6" style="height: 300px; width: 100%;"></div>
+                                </li>
+                                <li id="chart7">
+                                    <div id="chartContainer7" style="height: 300px; width: 100%;"></div>
+                                </li>
+
                             </ol>
 
                         </div>
