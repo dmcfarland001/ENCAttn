@@ -91,6 +91,7 @@ p {
 }
 
 #hd {
+
     height: 72px;
     padding: 1px;
     width: 100%;
@@ -374,7 +375,7 @@ div.catalog a {
     font-weight: bold;
 }
 
-#survey_link:hover, #effect_link:hover, #root_link:hover, #concept_link:hover #solution_link:hover, #charts_link:hover {
+#survey_link:hover, #effect_link:hover, #root_link:hover, #concept_link:hover, #solution_link:hover, #charts_link:hover {
     color: #00BCFF;
 }
 

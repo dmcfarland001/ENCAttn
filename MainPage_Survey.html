@@ -110,15 +110,34 @@
 
             <div class="yui-b" id="pagecontent">
 
-                <div class="yui-gc">
+                <div>
+                    <script type="application/javascript">
 
+                        var windowName = 'userConsole';
+                        var popUp = window.open('/popup-page.php', windowName, 'width=1000, height=700, left=24, top=24, scrollbars, resizable');
+
+                        if (popUp == null || typeof(popUp) == 'undefined') {
+                            alert('Please disable your pop-up blocker and click the "Open" link again.');
+                        }
+
+                        else {
+                            popUp.focus();
+                        }
+                    </script>
                     <div>
+                        <p id="hidden_link">
+                            <a href="https://www.surveymonkey.com/r/29DYM65" title="Survey">
+                                Survey
+                            </a>
+                        </p>
 
+                        <script>
+                            (function (t, e, n, c) {
+                                var o, s, i;
+                                t.SMCX = t.SMCX || [], e.getElementById(c) || (o = e.getElementsByTagName(n), s = o[o.length - 1], i = e.createElement(n), i.type = "text/javascript", i.async = !0, i.id = c, i.src = ["https:" === location.protocol ? "https://" : "http://", "widget.surveymonkey.com/collect/website/js/t2d3IaNn8cqlKwfpviqUd31FAhSiLyNmWcw7noNSUROFeWxFw_2FD_2FNunQ6yVHz3_2B_2F.js"].join(""), s.parentNode.insertBefore(i, s))
+                            })(window, document, "script", "smcx-sdk");
+                        </script>
 
-                        <script>(function (t, e, n, c) {
-                            var o, s, i;
-                            t.SMCX = t.SMCX || [], e.getElementById(c) || (o = e.getElementsByTagName(n), s = o[o.length - 1], i = e.createElement(n), i.type = "text/javascript", i.async = !0, i.id = c, i.src = ["https:" === location.protocol ? "https://" : "http://", "widget.surveymonkey.com/collect/website/js/t2d3IaNn8cqlKwfpviqUd31FAhSiLyNmWcw7noNSUROFeWxFw_2FD_2FNunQ6yVHz3_2B_2F.js"].join(""), s.parentNode.insertBefore(i, s))
-                        })(window, document, "script", "smcx-sdk");</script>
                     </div>
                 </div>
             </div>
@@ -137,7 +156,7 @@
 
 
                         <li>
-                            <a id="survey_link" href="" title="Try Our Survey!">Try
+                            <a id="survey_link" href="MainPage_Survey.html" title="Try Our Survey!">Try
                                 our survey!</a>
                         </li>
 
