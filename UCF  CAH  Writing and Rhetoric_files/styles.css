@@ -54,13 +54,8 @@ a:active, a:hover {
     border: none;
 }
 
-/*
-#inner_1, #inner_2, #inner_3, #inner_4, #inner_5, #inner_6, #inner_8, #inner_9, #inner_10, #inner_11
-#inner_12, #inner_13{
-    text-indent: 25px;
-    padding: 5px;
-}
-*/
+/*   Group 5's styling   */
+
 p {
     text-indent: 25px;
     padding: 5px;
@@ -71,7 +66,12 @@ p {
     padding-bottom: 20px;
 }
 
+#group_title, #group_blogs{
+    font-weight: bold;
+    color: black;
+    font-size: larger;
 
+}
 #inner_7 {
     padding-top: 15px;
     text-indent: 25px;
@@ -86,6 +86,26 @@ p {
     padding-top: 20px;
     font-weight: bold;
 }
+
+#survey_link, #effect_link, #root_link, #concept_link, #solution_link, #charts_link {
+    color: black;
+    font-weight: bold;
+}
+
+#survey_link:hover, #effect_link:hover, #root_link:hover, #concept_link:hover, #solution_link:hover, #charts_link:hover {
+    color: #00BCFF;
+}
+
+#pam_blog, #matt_blog, #dustin_blog, #haley_blog, #daniel_blog {
+    color: black;
+    font-weight: bold;
+}
+
+#pam_blog:hover, #matt_blog:hover, #dustin_blog:hover, #haley_blog:hover, #daniel_blog:hover {
+    color: #00BCFF;
+}
+
+/* end Group 5 styles */
 
 #doc4 {
     margin-top: 20px;
@@ -209,7 +229,7 @@ p {
     line-height: 1.25em;
 }
 
-/* ------------------------------------------------------- Callout Div ------------------------------------------------------- */
+/* ------------------------------------------------------- Callout Div -------------------------------------------------------
 
 .callout {
     border-radius: 10px;
@@ -235,7 +255,7 @@ p {
     color: #ffffff;
 }
 
-/* ------------------------------------------------------- View More, Catalog BUTTONS ------------------------------------------------------- */
+/* ------------------------------------------------------- View More, Catalog BUTTONS -------------------------------------------------------
 
 .viewall {
     margin-top: 1.2em;
@@ -274,7 +294,7 @@ div.catalog a {
     background-image: none;
     padding: 0;
 }
-
+*/
 /* ------------------------------------------------------- FOOTER ------------------------------------------------------- */
 
 #ft {
@@ -371,23 +391,7 @@ div.catalog a {
     background: url('http://writingandrhetoric.cah.ucf.edu/images/white-transp.png');
 }
 
-#survey_link, #effect_link, #root_link, #concept_link, #solution_link, #charts_link {
-    color: black;
-    font-weight: bold;
-}
 
-#survey_link:hover, #effect_link:hover, #root_link:hover, #concept_link:hover, #solution_link:hover, #charts_link:hover {
-    color: #00BCFF;
-}
-
-#pam_blog, #matt_blog, #dustin_blog, #haley_blog, #daniel_blog {
-    color: black;
-    font-weight: bold;
-}
-
-#pam_blog:hover, #matt_blog:hover, #dustin_blog:hover, #haley_blog:hover, #daniel_blog:hover {
-    color: #00BCFF;
-}
 
 .yui-skin-sam .yuimenuitemlabel, .yui-skin-sam .yuimenuitemlabel:visited {
     color: #000000;
@@ -414,10 +418,7 @@ div.catalog a {
     border: 0;
 }
 
-a.strong {
-    font-family: 'Myriad Pro', 'Trebuchet MS', Helvetica, Arial, sans-serif;
-    font-weight: bold;
-}
+
 
 .yui-skin-sam .yuimenuitem-hassubmenu-selected {
     background: url('http://writingandrhetoric.cah.ucf.edu/images/buttonbg-more.png');
