@@ -810,8 +810,7 @@
                 return from;
         }
         return -1;
-    };
-
+    }
     function isNullOrUndefined(value) {
         return value === null || typeof (value) === "undefined";
     }
@@ -1489,7 +1488,7 @@
         menu: {
             image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAgCAYAAAAbifjMAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAK6wAACusBgosNWgAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDcvMTUvMTTPsvU0AAAAP0lEQVRIie2SMQoAIBDDUvH/X667g8sJJ9KOhYYOkW0qGaU1MPdC0vGSbV19EACo3YMPAFH5BUBUjsqfAPpVXtNgGDfxEDCtAAAAAElFTkSuQmCC"
         }
-    }
+    };
 
     function setButtonState(chart, button, state) {
         if (button.getAttribute("state") !== state) {
@@ -1604,7 +1603,7 @@
 
         this[prop] = newValue;
         return true;
-    }
+    };
 
     //Stores values in _oldOptions so that it can be tracked for any changes
     CanvasJSObject.prototype.trackChanges = function (option) {
@@ -1642,7 +1641,7 @@
         this._eventListeners[eventName] = this._eventListeners[eventName] || [];
 
         this._eventListeners[eventName].push({context: context, eventHandler: eventHandler});
-    }
+    };
 
     CanvasJSObject.prototype.removeEventListener = function (eventName, eventHandler) {
         if (!eventName || !eventHandler || !this._eventListeners[eventName])
@@ -1656,11 +1655,11 @@
                 break;
             }
         }
-    }
+    };
 
     CanvasJSObject.prototype.removeAllEventListeners = function () {
         this._eventListeners = [];
-    }
+    };
 
     CanvasJSObject.prototype.dispatchEvent = function (eventName, eventParameter, context) {
 
@@ -1680,7 +1679,7 @@
         if (typeof (this[eventName]) === "function") {
             this[eventName].call(context || this.chart._publicChartReference, eventParameter);
         }
-    }
+    };
 
     //#endregion Class CanvasJSObject
 
@@ -2057,7 +2056,7 @@
             }, true);
 
             var exportOption = document.createElement("div");
-            exportOption.style.cssText = "padding: 2px 15px 2px 10px"
+            exportOption.style.cssText = "padding: 2px 15px 2px 10px";
             exportOption.innerHTML = this._cultureInfo.saveJPGText;
             this._dropdownMenu.appendChild(exportOption);
 
@@ -2075,7 +2074,7 @@
             }, true);
 
             var exportOption = document.createElement("div");
-            exportOption.style.cssText = "padding: 2px 15px 2px 10px"
+            exportOption.style.cssText = "padding: 2px 15px 2px 10px";
             exportOption.innerHTML = this._cultureInfo.savePNGText;
             this._dropdownMenu.appendChild(exportOption);
 
@@ -2124,7 +2123,7 @@
             this._canvasJSContainer.removeChild(this._creditLink);
 
         if (this._options.toolTip && this._toolTip._options !== this._options.toolTip)
-            this._toolTip._options = this._options.toolTip
+            this._toolTip._options = this._options.toolTip;
 
         for (var prop in this._toolTip._options) {
 
@@ -2133,7 +2132,7 @@
             }
         }
 
-    }
+    };
 
     Chart.prototype._updateSize = function () {
         var width = 0;
@@ -2159,7 +2158,7 @@
         }
 
         return false;
-    }
+    };
 
     // initialize chart objects
     Chart.prototype._initialize = function () {
@@ -2321,7 +2320,7 @@
         //}
 
         this._objectsInitialized = true;
-    }
+    };
 
     //indexOf is not supported in IE8-
     Chart._supportedChartTypes = addArrayIndexOf(["line", "stepLine", "spline", "column", "area", "stepArea", "splineArea", "bar", "bubble", "scatter",
@@ -2656,7 +2655,7 @@
                 }
             }, 2000);
         }
-    }
+    };
 
     Chart.prototype.attachPlotAreaEventHandlers = function () {
 
@@ -2674,13 +2673,13 @@
             bounds: this.plotArea
         });
 
-    }
+    };
 
     Chart.prototype.categoriseDataSeries = function () {
         var dataSeries = "";
 
         for (var i = 0; i < this.data.length; i++) {
-            dataSeries = this.data[i]
+            dataSeries = this.data[i];
             if (!dataSeries.dataPoints || dataSeries.dataPoints.length === 0 || !dataSeries.visible)
                 continue;
 
@@ -2728,7 +2727,7 @@
                         axisX: this.axisX,
                         dataSeriesIndexes: [], //index of dataSeries
                         yTotals: []
-                    }
+                    };
                     plotType.plotUnits.push(plotUnit);
                 }
 
@@ -2751,7 +2750,7 @@
                 previousDataSeriesCount += plotType.plotUnits[j].dataSeriesIndexes.length;
             }
         }
-    }
+    };
 
     Chart.prototype.assignIdToDataPoints = function () {
 
@@ -2767,7 +2766,7 @@
                 dataSeries.dataPointIds[j] = ++this._eventManager.lastObjectId;
             }
         }
-    }
+    };
 
     Chart.prototype._processData = function () {
         this.assignIdToDataPoints();
@@ -2791,7 +2790,7 @@
             }
         }
 
-    }
+    };
 
     Chart.prototype._processMultiseriesPlotUnit = function (plotUnit) {
         if (!plotUnit.dataSeriesIndexes || plotUnit.dataSeriesIndexes.length < 1)
@@ -2911,7 +2910,7 @@
 
         //this.dataPoints.sort(compareDataPointX);
         //this.dataPoints.sort(function (dataPoint1, dataPoint2) { return dataPoint1.x - dataPoint2.x; });
-    }
+    };
 
     Chart.prototype._processStackedPlotUnit = function (plotUnit) {
         if (!plotUnit.dataSeriesIndexes || plotUnit.dataSeriesIndexes.length < 1)
@@ -3090,7 +3089,7 @@
         //this.dataPoints.sort(function (dataPoint1, dataPoint2) { return dataPoint1.x - dataPoint2.x; });
 
         //window.console.log("viewPortYMin: " + plotInfo.viewPortYMin + "; viewPortYMax: " + plotInfo.viewPortYMax);
-    }
+    };
 
     Chart.prototype._processStacked100PlotUnit = function (plotUnit) {
         if (!plotUnit.dataSeriesIndexes || plotUnit.dataSeriesIndexes.length < 1)
@@ -3234,7 +3233,7 @@
         //this.dataPoints.sort(function (dataPoint1, dataPoint2) { return dataPoint1.x - dataPoint2.x; });
 
         //window.console.log("viewPortYMin: " + plotInfo.viewPortYMin + "; viewPortYMax: " + plotInfo.viewPortYMax);
-    }
+    };
 
     Chart.prototype._processMultiYPlotUnit = function (plotUnit) {
         if (!plotUnit.dataSeriesIndexes || plotUnit.dataSeriesIndexes.length < 1)
@@ -3359,7 +3358,7 @@
 
         //this.dataPoints.sort(compareDataPointX);
         //this.dataPoints.sort(function (dataPoint1, dataPoint2) { return dataPoint1.x - dataPoint2.x; });
-    }
+    };
 
     //getClosest returns objects nearby and hence shouldn't be used for events like click, mouseover, mousemove, etc which require object that is exactly under the mouse.
     Chart.prototype.getDataPointAtXY = function (mouseX, mouseY, getClosest) {
@@ -3404,7 +3403,7 @@
         }
 
         return closestResult;
-    }
+    };
 
     Chart.prototype.getObjectAtXY = function (mouseX, mouseY, getClosest) {
         getClosest = getClosest || false;
@@ -3429,7 +3428,7 @@
         }
 
         return id;
-    }
+    };
 
     /// <summary>Calculates Font Size based on standardSize and Chart Size</summary>
     /// <param name="standardSize" type="Number">Standard font size for a Chart with min(width,height) = 400px</param>
@@ -3442,7 +3441,7 @@
         var fontSizeScaleFactor = standardSize / 400;
 
         return Math.round(Math.min(this.width, this.height) * fontSizeScaleFactor);
-    }
+    };
 
     //#region Events
 
@@ -3451,7 +3450,7 @@
         //this.overlaidCanvas.width = 0;
         //this.overlaidCanvas.width = width;
         this.overlaidCanvasCtx.clearRect(0, 0, this.width, this.height);
-    }
+    };
 
     Chart.prototype.clearCanvas = function () {
         this.ctx.clearRect(0, 0, this.width, this.height);
@@ -3460,11 +3459,11 @@
             this.ctx.fillStyle = this.backgroundColor;
             this.ctx.fillRect(0, 0, this.width, this.height);
         }
-    }
+    };
 
     Chart.prototype.attachEvent = function (param) {
         this._events.push(param);
-    }
+    };
 
     Chart.prototype._touchEventHandler = function (ev) {
         if (!ev.changedTouches || !this.interactivityEnabled)
@@ -3516,8 +3515,6 @@
             }
         } catch (e) {
         }
-        ;
-
         this._lastTouchEventType = ev.type;
 
         if (!!this._lastTouchData.scroll && this.zoomEnabled) {
@@ -3549,7 +3546,7 @@
                 ev.preventDefault();
             }
         }
-    }
+    };
 
     Chart.prototype._dispatchRangeEvent = function (eventName, triggerSource) {
         var eventParameter = {};
@@ -3575,7 +3572,7 @@
         }
 
         this.dispatchEvent(eventName, eventParameter, this._publicChartReference);
-    }
+    };
 
     Chart.prototype._mouseEventHandler = function (ev) {
 
@@ -3717,13 +3714,13 @@
 
         //if (this._toolTip.enabled)
         //    this._toolTip.mouseMoveHandler(ev.x, ev.y);
-    }
+    };
 
     Chart.prototype._plotAreaMouseDown = function (x, y) {
         this.isDrag = true;
 
         this.dragStartPoint = {x: x, y: y};
-    }
+    };
 
     Chart.prototype._plotAreaMouseUp = function (x, y) {
 
@@ -3812,7 +3809,7 @@
         }
 
         this.isDrag = false;
-    }
+    };
 
     Chart.prototype._plotAreaMouseMove = function (x, y) {
         if (this.isDrag && this.plotInfo.axisPlacement !== "none") {
@@ -3891,7 +3888,7 @@
 
         } else
             this._toolTip.mouseMoveHandler(x, y);
-    }
+    };
 
     //#endregion Events
 
@@ -3951,7 +3948,7 @@
         }
 
         return validRegion;
-    }
+    };
 
     Chart.prototype.preparePlotArea = function () {
 
@@ -3999,14 +3996,14 @@
         }
 
         plotArea.layoutManager = new LayoutManager(plotArea.x1, plotArea.y1, plotArea.x2, plotArea.y2, 2);
-    }
+    };
 
     Chart.prototype.getPixelCoordinatesOnPlotArea = function (x, y) {
         return {
             x: this.axisX.getPixelCoordinatesOnAxis(x).x, y: this.axisY.getPixelCoordinatesOnAxis(y).y
-        }
+        };
         //return { x: 5, y: 10 };
-    }
+    };
 
     //#region Render Methods
 
@@ -4187,7 +4184,7 @@
                             mid = Math.min(indexLabel.bounds.y2, plotArea.y2) - visibleHeight / 2 - marginY;
                     }
                     else
-                        mid = (Math.max(indexLabel.bounds.y1, plotArea.y1) + Math.min(indexLabel.bounds.y2, plotArea.y2)) / 2
+                        mid = (Math.max(indexLabel.bounds.y1, plotArea.y1) + Math.min(indexLabel.bounds.y2, plotArea.y2)) / 2;
 
                     if (direction > 0) {
                         y = Math.max(indexLabel.point.y, mid) - visibleHeight / 2;
@@ -4316,7 +4313,7 @@
             startTimePercent: .7
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderLine = function (plotUnit) {
 
@@ -4518,7 +4515,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderStepLine = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -4718,7 +4715,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     function getBezierPoints(points, tension) {
         var bezierPoints = [];
@@ -4738,10 +4735,10 @@
 
             var drv1 = {
                 x: (points[i2].x - points[i1].x) / tension, y: (points[i2].y - points[i1].y) / tension
-            }
+            };
             var cp1 = {
                 x: points[pointIndex].x + drv1.x / 3, y: points[pointIndex].y + drv1.y / 3
-            }
+            };
             bezierPoints[bezierPoints.length] = cp1;
 
 
@@ -4751,10 +4748,10 @@
 
             var drv2 = {
                 x: (points[i2].x - points[i1].x) / tension, y: (points[i2].y - points[i1].y) / tension
-            }
+            };
             var cp2 = {
                 x: points[pointIndex].x - drv2.x / 3, y: points[pointIndex].y - drv2.y / 3
-            }
+            };
             bezierPoints[bezierPoints.length] = cp2;
 
             bezierPoints[bezierPoints.length] = points[i];
@@ -4961,7 +4958,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     var drawRect = function (ctx, x1, y1, x2, y2, color, borderThickness, borderColor, top, bottom, left, right, fillOpacity) {
         if (typeof (fillOpacity) === "undefined")
@@ -5042,7 +5039,7 @@
             //   alert(x1)
             ctx.save();
             ctx.beginPath();
-            ctx.moveTo(x1, y1)
+            ctx.moveTo(x1, y1);
             ctx.lineTo(x1 + bevelDepth, y1 + bevelDepth);
             ctx.lineTo(x1 + bevelDepth, y2 - bevelDepth);
             ctx.lineTo(x1, y2);
@@ -5060,7 +5057,7 @@
         if (right === true) {
             ctx.save();
             ctx.beginPath();
-            ctx.moveTo(x2, y1)
+            ctx.moveTo(x2, y1);
             ctx.lineTo(x2 - bevelDepth, y1 + bevelDepth);
             ctx.lineTo(x2 - bevelDepth, y2 - bevelDepth);
             ctx.lineTo(x2, y2);
@@ -5078,7 +5075,7 @@
         }
         //	
 
-    }
+    };
 
     Chart.prototype.renderColumn = function (plotUnit) {
 
@@ -5257,7 +5254,7 @@
             animationBase: animationBase
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderStackedColumn = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -5433,7 +5430,7 @@
             animationBase: animationBase
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderStackedColumn100 = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -5612,7 +5609,7 @@
             animationBase: animationBase
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderBar = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -5772,7 +5769,7 @@
             animationBase: animationBase
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderStackedBar = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -5940,7 +5937,7 @@
             animationBase: animationBase
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderStackedBar100 = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -6114,7 +6111,7 @@
             animationBase: animationBase
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderArea = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -6346,7 +6343,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderSplineArea = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -6571,7 +6568,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderStepArea = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -6809,7 +6806,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderStackedArea = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -7096,7 +7093,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderStackedArea100 = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -7396,7 +7393,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderBubble = function (plotUnit) {
 
@@ -7573,7 +7570,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderScatter = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -7733,7 +7730,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderCandlestick = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -7963,7 +7960,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderRangeColumn = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -8144,7 +8141,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderRangeBar = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -8323,7 +8320,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
     Chart.prototype.renderRangeArea = function (plotUnit) {
         var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;
@@ -8613,7 +8610,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
 
 
     Chart.prototype.renderRangeSplineArea = function (plotUnit) {
@@ -8892,7 +8889,7 @@
             animationBase: 0
         };
         return animationInfo;
-    }
+    };
     //#region pieChart
 
     var drawSegment = function (ctx, center, radius, color, type, theta1, theta2, fillOpacity, percentInnerRadius) {
@@ -10047,8 +10044,8 @@
                 });
             }
 
-            return;
-        }
+
+        };
 
         initLabels();
 
@@ -10100,7 +10097,7 @@
         }
 
         //this.ctx.strokeRect(plotArea.x1 + 1, plotArea.y1, plotArea.width - 2, plotArea.height);
-    }
+    };
 
     //#endregion pieChart
 
@@ -10160,7 +10157,7 @@
         } else if (position === "right") {
             this._rightOccupied += size.width;// this is width when seen upright/vertically
         }
-    }
+    };
 
     LayoutManager.prototype.unRegisterSpace = function (position, size) {
         if (position === "top") {
@@ -10173,7 +10170,7 @@
         } else if (position === "right") {
             this._rightOccupied -= size.width;// this is width when seen upright/vertically
         }
-    }
+    };
 
     LayoutManager.prototype.getFreeSpace = function () {
         ///<signature>
@@ -10188,7 +10185,7 @@
             width: (this._x2 - this._x1) - this._rightOccupied - this._leftOccupied,
             height: (this._y2 - this._y1) - this._bottomOccupied - this._topOccupied
         };
-    }
+    };
 
     LayoutManager.prototype.reset = function () {
         //so that there is enough padding.
@@ -10196,7 +10193,7 @@
         this._bottomOccupied = this._padding;
         this._leftOccupied = this._padding;
         this._rightOccupied = this._padding;
-    }
+    };
     //#endregion Class LayoutManager
 
     //#region Class TextBlock
@@ -10267,13 +10264,13 @@
 
         if (preserveContext)
             this.ctx.restore();
-    }
+    };
 
     TextBlock.prototype.setText = function (text) {
         this.text = text;
         this._isDirty = true;
         this._wrappedText = null;
-    }
+    };
 
     TextBlock.prototype.measureText = function () {
         if (this.maxWidth === null) {
@@ -10286,7 +10283,7 @@
         return {
             width: this.width, height: this.height
         }
-    }
+    };
 
     TextBlock.prototype._getLineWithWidth = function (text, width, clipWord) {
         text = String(text);
@@ -10342,11 +10339,11 @@
         return {
             text: tempText, width: textWidth
         };
-    }
+    };
 
     TextBlock.prototype._wrapText = function wrapText() {
         //this.ctx.save();
-        var text = new String(trimString(String(this.text)));
+        var text = String(trimString(String(this.text)));
         var lines = [];
         var font = this.ctx.font; // Save the current Font
         var height = 0;
@@ -10381,12 +10378,12 @@
         this.height = height + this.padding * 2;
 
         this.ctx.font = font; // Restore the font
-    }
+    };
 
     TextBlock.prototype._getFontString = function () {
         //return this.fontStyle + " " + this.fontWeight + " " + this.fontSize + "px " + this.fontFamily
         return getFontString("", this, null);
-    }
+    };
 
     //#endregion Class TextBlock
 
@@ -10412,7 +10409,7 @@
         this.bounds = {
             x1: null, y1: null, x2: null, y2: null
         };
-    }
+    };
 
     extend(Title, CanvasJSObject);
     Title.prototype.render = function () {
@@ -10548,7 +10545,7 @@
         };
 
         this.ctx.textBaseline = "top";
-    }
+    };
 
 
     //#endregion Class Title
@@ -10575,7 +10572,7 @@
         this.bounds = {
             x1: null, y1: null, x2: null, y2: null
         };
-    }
+    };
 
     extend(Subtitle, CanvasJSObject);
     Subtitle.prototype.render = Title.prototype.render;
@@ -10983,7 +10980,7 @@
         this.bounds = {
             x1: left, y1: top, x2: left + this.width, y2: top + this.height
         };
-    }
+    };
 
     //#endregion Legend
 
@@ -11003,7 +11000,7 @@
         this.ctx.fillStyle = "red";
         this.ctx.fillRect(freeSpace.x1, freeSpace.y1, freeSpace.x2, freeSpace.y2);
 
-    }
+    };
     //#endregion Class PlotArea
 
     //#region DataSeries
@@ -11020,7 +11017,7 @@
         this.id = id;
         this.chart._eventManager.objectMap[id] = {
             id: id, objectType: "dataSeries", dataSeriesIndex: index
-        }
+        };
         this.dataPointIds = [];
         this.plotUnit = [];
 
@@ -11069,7 +11066,7 @@
             window.console.log("Unknown Chart Type: " + type);
             return null;
         }
-    }
+    };
 
     DataSeries.getDefaultLegendMarker = function (type) {
 
@@ -11089,7 +11086,7 @@
             window.console.log("Unknown Chart Type: " + type);
             return null;
         }
-    }
+    };
 
     //Finds dataPoint with the given x value. If findClosest is set, finds dataPoint with closest x value. 
     //Returns searchResult object if found, else returns null
@@ -11177,7 +11174,7 @@
             return searchResult;
         else
             return null;
-    }
+    };
 
     // x & y should be in pixels. Can be used only after rendering the chart.
     DataSeries.prototype.getDataPointAtXY = function (x, y, getClosest) {
@@ -11458,7 +11455,7 @@
         //    window.console.log(j + ": distance = " + closestResult.distance);
 
         return closestResult;
-    }
+    };
 
     DataSeries.prototype.getMarkerProperties = function (index, x, y, ctx) {
         var dataPoints = this.dataPoints;
@@ -11479,7 +11476,7 @@
             borderColor: markerBorderColor,
             borderThickness: markerBorderThickness
         }
-    }
+    };
     //#endregion DataSeries
 
     //#region Axis
@@ -11551,7 +11548,7 @@
             if (this.labelAngle > 90 && this.labelAngle <= 270)
                 this.labelAngle -= 180;
             else if (this.labelAngle > 180 && this.labelAngle <= 270)
-                this.labelAngle -= 180
+                this.labelAngle -= 180;
             else if (this.labelAngle > 270 && this.labelAngle <= 360)
                 this.labelAngle -= 360
         }
@@ -11640,7 +11637,7 @@
         }
 
         if (this.type === "axisX" && this.chart.plotInfo.axisXValueType === "dateTime") {
-            endPoint = addToDateTime(new Date(this.viewportMaximum), this.interval, this.intervalType)
+            endPoint = addToDateTime(new Date(this.viewportMaximum), this.interval, this.intervalType);
             //endPoint = this.viewportMaximum;
 
             for (i = this.intervalStartPosition; i < endPoint; addToDateTime(i, this.interval, this.intervalType)) {
@@ -11772,7 +11769,7 @@
             });
         }
 
-    }
+    };
 
     Axis.prototype.createLabelsAndCalculateWidth = function () {
 
@@ -11817,7 +11814,7 @@
         //}
 
         return axisWidth;
-    }
+    };
 
     Axis.prototype.createLabelsAndCalculateHeight = function () {
         var maxLabelEffectiveHeight = 0;
@@ -11857,7 +11854,7 @@
         var titleHeight = this.title ? getFontHeightInPixels(this.titleFontFamily, this.titleFontSize, this.titleFontWeight) + 2 : 0;
 
         return titleHeight + maxLabelEffectiveHeight + this.tickLength + 5;
-    }
+    };
 
     //Static Method that co-ordinates between axisX, axisY and renders them
     Axis.setLayoutAndRender = function (axisX, axisY, axisY2, axisPlacement, freeSpace) {
@@ -11940,7 +11937,7 @@
 
                 axisY.lineCoordinates = {
                     x1: x2, y1: y1, x2: x2, y2: y2, height: Math.abs(y2 - y1)
-                }
+                };
 
                 axisY.boundingRect = {
                     x1: x1, y1: y1, x2: x2, y2: y2, width: x2 - x1, height: y2 - y1
@@ -11962,7 +11959,7 @@
 
                 axisY2.lineCoordinates = {
                     x1: x1, y1: y1, x2: x1, y2: y2, height: Math.abs(y2 - y1)
-                }
+                };
 
                 axisY2.boundingRect = {
                     x1: x1, y1: y1, x2: x2, y2: y2, width: x2 - x1, height: y2 - y1
@@ -12209,7 +12206,7 @@
                 axisY2.renderStripLinesOfThicknessType("pixel");
         }
 
-    }
+    };
 
     Axis.prototype.renderLabelsTicksAndTitle = function () {
 
@@ -12566,7 +12563,7 @@
 
             }
         }
-    }
+    };
 
     Axis.prototype.renderInterlacedColors = function () {
         var ctx = this.chart.plotArea.ctx;
@@ -12627,7 +12624,7 @@
         }
 
         ctx.beginPath();
-    }
+    };
 
     //Renders stripLines of given thickness type.
     Axis.prototype.renderStripLinesOfThicknessType = function (thicknessType) {
@@ -12723,7 +12720,7 @@
             }
 
         }
-    }
+    };
 
     Axis.prototype.renderAxisLine = function () {
         //var ctx = this.chart.plotArea.ctx;
@@ -12763,7 +12760,7 @@
                 ctx.stroke();
             }
         }
-    }
+    };
 
     Axis.prototype.getPixelCoordinatesOnAxis = function (value) {
         var xy = {};
@@ -12788,7 +12785,7 @@
         }
 
         return xy;
-    }
+    };
 
     Axis.prototype.convertPixelToValue = function (pixel) {
 
@@ -12801,14 +12798,14 @@
         value = this.conversionParameters.minimum + (p - this.conversionParameters.reference) / this.conversionParameters.pixelPerUnit;
 
         return value;
-    }
+    };
 
     Axis.prototype.setViewPortRange = function (viewportMinimum, viewportMaximum) {
 
         this.sessionVariables.newViewportMinimum = this.viewportMinimum = Math.min(viewportMinimum, viewportMaximum);
         this.sessionVariables.newViewportMaximum = this.viewportMaximum = Math.max(viewportMinimum, viewportMaximum);
 
-    }
+    };
 
     Axis.prototype.getXValueAt = function (pixel) {
         if (!pixel)
@@ -12824,7 +12821,7 @@
         }
 
         return xval;
-    }
+    };
 
     Axis.prototype.calculateValueToPixelConversionParameters = function (value) {
         this.reversed = false;
@@ -12850,7 +12847,7 @@
 
 
         this.conversionParameters = conversionParameters;
-    }
+    };
 
     Axis.prototype.calculateAxisParameters = function () {
 
@@ -13338,7 +13335,7 @@
         //    window.console.log(this.type + ": Max = " + this.viewportMaximum);
         //    window.console.log(this.type + ": Interval = " + this.interval);
         //}
-    }
+    };
 
     Axis.getNiceNumber = function (x, round) {
 
@@ -13367,7 +13364,7 @@
         }
 
         return Number((nf * Math.pow(10, exp)).toFixed(20));
-    }
+    };
 
     Axis.prototype.getLabelStartPoint = function () {
 
@@ -13441,7 +13438,7 @@
         }
 
         return dateTime;
-    }
+    };
 
     //#endregion Axis
 
@@ -13602,7 +13599,7 @@
             this.container.style.borderRadius = this.contentDiv.style.borderRadius;
             this.chart._canvasJSContainer.appendChild(this.container);
         }
-    }
+    };
 
     ToolTip.prototype.mouseMoveHandler = function (x, y) {
 
@@ -13610,7 +13607,7 @@
             this._lastUpdated = new Date().getTime();
             this._updateToolTip(x, y);
         }
-    }
+    };
 
     ToolTip.prototype._updateToolTip = function (mouseX, mouseY) {
         //return;
@@ -13860,7 +13857,7 @@
             //if (isDebugMode)
             //  console.log("searchX: " + x + " x: " + searchResult.dataPoint.x + "; y: " + searchResult.dataPoint.y + "; distance: " + searchResult.distance + "; steps: " + steps);
         }
-    }
+    };
 
 
     ToolTip.prototype.highlightObjects = function (entries) {
@@ -13992,8 +13989,8 @@
         overlaidCanvasCtx.globalAlpha = 1;
         overlaidCanvasCtx.beginPath();
 
-        return;
-    }
+
+    };
 
     ToolTip.prototype.getToolTipInnerHTML = function (e) {
         var entries = e.entries;
@@ -14124,7 +14121,7 @@
         }
 
         return toolTipInnerHtml;
-    }
+    };
 
     ToolTip.prototype.enableAnimation = function () {
         if (this.container.style.WebkitTransition)
@@ -14134,7 +14131,7 @@
         this.container.style.MozTransition = "left .2s ease-out, bottom .2s ease-out";
         this.container.style.MsTransition = "left .2s ease-out, bottom .2s ease-out";
         this.container.style.transition = "left .2s ease-out, bottom .2s ease-out";
-    }
+    };
 
     ToolTip.prototype.disableAnimation = function () {
         if (!this.container.style.WebkitTransition)
@@ -14144,7 +14141,7 @@
         this.container.style.MozTransition = "";
         this.container.style.MsTransition = "";
         this.container.style.transition = "";
-    }
+    };
 
     ToolTip.prototype.hide = function (resetOverlayedCanvas) {
         if (!this.enabled)
@@ -14159,7 +14156,7 @@
         //this.chart.overlaidCanvasCtx.clearRect(0, 0, this.chart.overlaidCanvas.width, this.chart.overlaidCanvas.height);
         if (resetOverlayedCanvas)
             this.chart.resetOverlayedCanvas();
-    }
+    };
 
     Chart.prototype.getPercentAndTotal = function (ds, dp) {
 
@@ -14199,7 +14196,7 @@
         return {
             percent: percent, total: total
         };
-    }
+    };
 
     Chart.prototype.replaceKeywordsWithValue = function (str, dp, ds, dpIndex, indexKeywordValue) {
         //var regex = /\{\s*[a-zA-Z]+\s*\}|"[^"]*"|'[^']*'/g;
@@ -14256,9 +14253,6 @@
                 }
             } catch (e) {
             }
-            ;
-
-
             var obj = null;
 
             if (key === "color") {
@@ -14286,10 +14280,10 @@
                 return numberFormat(value, dp.zValueFormatString ? dp.zValueFormatString : ds.zValueFormatString ? ds.zValueFormatString : "#,##0.########", chart._cultureInfo);
             else
                 return value;
-        }
+        };
 
         return str.replace(regex, fcn);
-    }
+    };
 
 
     //#endregion ToolTip
@@ -14336,11 +14330,11 @@
             this.ghostCtx.clearRect(0, 0, this.chart.width, this.chart.height);
             this.ghostCtx.beginPath();
         }
-    }
+    };
 
     EventManager.prototype.getNewObjectTrackingId = function () {
         return ++this.lastObjectId;
-    }
+    };
 
     EventManager.prototype.mouseEventHandler = function (ev) {
 
@@ -14491,7 +14485,7 @@
                 this.fireEvent(eventObjectMaps[i], "mousemove", ev);
             }
         }
-    }
+    };
 
     EventManager.prototype.fireEvent = function (eventObjectMap, eventType, ev) {
 
@@ -14501,7 +14495,7 @@
         var eventParameter = eventObjectMap.eventParameter;
         var eventContext = eventObjectMap.eventContext;
         //var context = eventObjectMap.eventContext.context;
-        var userContext = eventObjectMap.eventContext.userContext
+        var userContext = eventObjectMap.eventContext.userContext;
 
         if (userContext && eventContext && userContext[eventContext[eventType]])
             userContext[eventContext[eventType]].call(userContext, eventParameter);
@@ -14520,7 +14514,7 @@
         if (eventType === "click" && eventObjectMap.objectType === "dataPoint" && this.chart.pieDoughnutClickHandler) {
             this.chart.pieDoughnutClickHandler.call(this.chart.data[eventObjectMap.dataSeriesIndex], eventParameter);
         }
-    }
+    };
 
     //#endregion Event Manager
 
@@ -14607,7 +14601,7 @@
             this.chart.isAnimating = false;
         }
 
-    }
+    };
 
     Animator.prototype.cancelAllAnimations = function () {
 
@@ -14619,7 +14613,7 @@
 
         this.animationRequestId = null;
         this.chart.isAnimating = false;
-    }
+    };
 
     var AnimationHelper = {
         yScaleAnimation: function (fractionComplete, animationInfo) {
@@ -14694,7 +14688,7 @@
                 return c * (t /= d) * t * t * t + b;
             }
         }
-    }
+    };
 
     //#endregion Animator
 
@@ -14814,7 +14808,7 @@
         //	ctx.drawRect(x1, y1, x2 - x1, y2 - y1);
         //	ctx.stroke();
         //}
-    }
+    };
 
     //#endregion Render Helper
 
@@ -14859,7 +14853,7 @@
             }
         }
 
-    }
+    };
 
     CanvasJS.Chart.version = "v1.8.0 Beta 4";
     window.CanvasJS = CanvasJS;

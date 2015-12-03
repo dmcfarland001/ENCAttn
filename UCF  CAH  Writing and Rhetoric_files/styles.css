@@ -72,6 +72,10 @@ p {
     font-size: larger;
 
 }
+#wc_1, #wc_2, #wc_3, #wc_4, #wc_5, #wc_6, #wc_7, #wc_8, #wc_9{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 #inner_7 {
     padding-top: 15px;
     text-indent: 25px;
@@ -82,17 +86,13 @@ p {
     padding-bottom: 20px;
 }
 
-#root_title, #main_title {
-    padding-top: 20px;
-    font-weight: bold;
-}
 
-#survey_link, #effect_link, #root_link, #concept_link, #solution_link, #charts_link {
+#survey_link, #effect_link, #root_link, #concept_link, #solution_link, #charts_link, #wc_link {
     color: black;
     font-weight: bold;
 }
 
-#survey_link:hover, #effect_link:hover, #root_link:hover, #concept_link:hover, #solution_link:hover, #charts_link:hover {
+#survey_link:hover, #effect_link:hover, #root_link:hover, #concept_link:hover, #solution_link:hover, #charts_link:hover, #wc_link:hover {
     color: #00BCFF;
 }
 
