@@ -87,12 +87,12 @@ p {
 }
 
 
-#survey_link, #effect_link, #root_link, #concept_link, #solution_link, #charts_link, #wc_link {
+#survey_link, #effect_link, #root_link, #concept_link, #solution_link, #charts_link, #wc_link, #home_link {
     color: black;
     font-weight: bold;
 }
 
-#survey_link:hover, #effect_link:hover, #root_link:hover, #concept_link:hover, #solution_link:hover, #charts_link:hover, #wc_link:hover {
+#survey_link:hover, #effect_link:hover, #root_link:hover, #concept_link:hover, #solution_link:hover, #charts_link:hover, #wc_link:hover, #home_link:hover {
     color: #00BCFF;
 }
 
